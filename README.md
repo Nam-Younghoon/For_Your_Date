@@ -16,7 +16,7 @@
 
 ## 2. 개발 환경 및 배포
 ### 개발 환경
-HTML CSS JAVASCRIPT
+[HTML](https://img.shields.io/badge/-HTML5-E34F26?logo=HTML5&logoColor=white) [CSS3](https://img.shields.io/badge/css3-1572B6?logo=css3&logoColor=white) [JAVASCRIPT](https://img.shields.io/badge/javascript-F7DF1E?logo=javascript&logoColor=white)
 
 ### 개발 기간
 ### 웹 서비스 URL
