@@ -11,6 +11,9 @@
 ### 기능
 - 사용자로부터 데이트 장소, 계절, 방문 시간, 교통수단 데이터를 받아 데이트 코스 추천
 
+### 프로토타입
+- [카카오오븐](https://ovenapp.io/view/U23mWtW1jsSSKADVnLsFzei88m4K0wid/)
+
 ## 2. 개발 환경 및 배포
 ### 개발 환경
 HTML CSS JAVASCRIPT
@@ -21,8 +24,6 @@ HTML CSS JAVASCRIPT
 ## 3. 프로젝트 구조와 개발 일정
 
 ## 4. UI
-### 프로토타입
-[카카오오븐](https://ovenapp.io/view/U23mWtW1jsSSKADVnLsFzei88m4K0wid/)
 
 ## 5. 개발자
 
