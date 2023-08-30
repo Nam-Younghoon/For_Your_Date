@@ -21,6 +21,8 @@ HTML CSS JAVASCRIPT
 ## 3. 프로젝트 구조와 개발 일정
 
 ## 4. UI
+### 프로토타입
+[카카오오븐](https://ovenapp.io/view/U23mWtW1jsSSKADVnLsFzei88m4K0wid/)
 
 ## 5. 개발자
 
