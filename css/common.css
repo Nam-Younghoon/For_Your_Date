@@ -1,14 +1,123 @@
 body {
-    margin: 0 auto;
-}
-
-.main {
     display: flex;
     height: 100vh;
+    flex-direction: column;
+    margin: 0 auto;
+    font-family: 'Poor Story', cursive !important;
+}
+
+.background-image {
+    position: fixed;
+    left: 0;
+    right: 0;
     width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: block;
     background-image: url("images/main-background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     filter: blur(5px);
 }
+
+.main {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px 20px 0px;
+}
+
+.card {
+    width: 450px;
+    height: 800px;
+    padding: 40px 24px 40px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    box-shadow: 0 5px 10px rgba(0,0,0,.5);
+    overflow: scroll;
+}
+
+/* @media (min-width: 375px) and (max-width: 412px) {
+    .card {
+        width: 300px;
+        height: 800px;
+        padding: 20px 12px 20px 12px;
+    }
+} */
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    margin: 0 auto;
+    font-size: 65px;
+}
+
+.card lottie-player {
+    width: 300px;
+    height: 300px;
+}
+
+
+.card p {
+    text-align: center;
+}
+
+.card p span {
+    color: #f06c88;
+}
+
+.card-main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-main-description {
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.card-main-btn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.card-main-btn button {
+    height: 56px;
+
+}
+
+.btn-plan-now {
+    background-color: #f06c88 !important;
+    border: 0px !important;
+}
+
+.btn-plan-now:hover {
+    background-color: #ef5979 !important;
+    border: 0px !important;
+}
+
+.btn-plan-previous {
+    background-color: #ee91a5 !important;
+    border: 0px !important;
+}
+
+.btn-plan-previous:hover {
+    background-color: #ec839a !important;
+}
+
+
+footer {
+    margin-top: 30px;
+    color: white;
+}
+
