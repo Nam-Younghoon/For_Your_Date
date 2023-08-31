@@ -107,23 +107,27 @@ body {
 
 }
 
-.btn-plan-now {
+.btn-plan-now, #result-save-btn {
     background-color: #f06c88 !important;
     border: 0px !important;
 }
 
-.btn-plan-now:hover {
+.btn-plan-now:hover, #result-save-btn:hover {
     background-color: #ef5979 !important;
     border: 0px !important;
 }
 
-.btn-plan-previous {
+.btn-plan-previous, #home-btn {
     background-color: #ee91a5 !important;
     border: 0px !important;
 }
 
-.btn-plan-previous:hover {
+.btn-plan-previous:hover, #home-btn:hover {
     background-color: #ec839a !important;
+}
+
+#result-save-btn, #home-btn {
+    height: 56px;
 }
 
 .form-label {
@@ -173,6 +177,32 @@ body {
     flex-grow: 1;
     width: 150px;
     height: 150px;
+}
+
+#result {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#result div:nth-child(1){
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+#result div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#result div:nth-child(1) textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    overflow: auto;
+    
 }
 
 footer {

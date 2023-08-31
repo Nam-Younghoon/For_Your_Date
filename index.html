@@ -22,13 +22,15 @@
             init();
             clickPlanBtn();
             clickBackBtn();
-            recommandBtn()
+            recommandBtn();
+            homeBtn();
         })
 
         function init() {
             $('#main').show();
             $('#plan').hide();
             $('#loading').hide();
+            $('#result').hide();
         }
 
         function clickPlanBtn() {
@@ -55,6 +57,19 @@
             $('#recommand-now').click(function() {
                 $('#plan').fadeOut(500, function() {
                     $('#loading').fadeIn(500)
+                    setTimeout(() => {
+                        $('#loading').fadeOut(500, () => {
+                            $('#result').fadeIn(500)
+                        })
+                    }, 3000)
+                })
+            })
+        }
+
+        function homeBtn() {
+            $('#home-btn').click(() => {
+                $('#result').fadeOut(500, () => {
+                    $('#main').fadeIn(500)
                 })
             })
         }
@@ -157,6 +172,22 @@
 
             <div id="loading">
                 <lottie-player src="https://lottie.host/b416a7f7-cbf5-490e-b7b1-9fb9ec8c6b36/7Uy95FpfRO.json" background="#fff" speed="1" loop autoplay direction="1" mode="normal"></lottie-player>
+                <p>추천 장소를 작성중입니다<br>잠시만 기다려주세요...</p>
+            </div>
+
+            <div id="result">
+                <div>
+                    <textarea class="form-control" readonly></textarea>
+                </div>
+                <div>
+                    <button id="result-save-btn" class="btn btn-primary btn-plan-now">저장하기</button>
+                    <button id="home-btn" class="btn btn-primary btn-plan-previous">홈으로</button>
+                </div>
+            </div>
+
+            <div id="history">
+                
+
             </div>
         </div>
 
