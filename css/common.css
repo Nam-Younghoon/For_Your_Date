@@ -205,6 +205,21 @@ body {
     
 }
 
+#history {
+    width: 100%;
+}
+
+#history-appbar {
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+}
+
+#history-appbar > div {
+    flex-grow : 1;
+    text-align: center;
+}
+
 footer {
     margin-top: 30px;
     color: white;
