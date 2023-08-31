@@ -11,30 +11,160 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poor+Story&display=swap" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            init();
+            clickPlanBtn();
+            clickBackBtn();
+            recommandBtn()
+        })
+
+        function init() {
+            $('#main').show();
+            $('#plan').hide();
+            $('#loading').hide();
+        }
+
+        function clickPlanBtn() {
+            $('#plan-now').click(function() {
+                $('#main').fadeOut(500, function() {
+                    $('#plan').fadeIn(500)
+                })
+            })
+        }
+
+        function clickBackBtn() {
+            $('#back-button').click(function() {
+                $('#plan').fadeOut(500, function() {
+                    $('#main').fadeIn(500, function() {
+                        $('#place-where').val('');
+                        $('.form-select option:eq(0)').prop('selected', true);
+                    });
+                });
+                
+            })
+        }
+
+        function recommandBtn() {
+            $('#recommand-now').click(function() {
+                $('#plan').fadeOut(500, function() {
+                    $('#loading').fadeIn(500)
+                })
+            })
+        }
+
+    </script>
+
 </head>
 <body>
     <div class="container-fluid background-image"></div>
     <div class="container-fluid main">
 
-        <div class="card rounded-5">
-            
-            <div class="container card-main-title">
-                <p class="container title">For Your <span>Date</span></p>
-    
-                <lottie-player src="https://lottie.host/3662199f-35fa-4b23-9331-3330248ec0ce/8S4rhWC8Wd.json" background="#fff" speed="1" loop autoplay direction="1" mode="normal"></lottie-player>
-                <p class="container card-main-description"><span>데이트</span>로 고민하는 당신을 위해<br>계획해드릴게요</p>
+        <div class="card card-main rounded-5">
+
+            <div id="main">
+                <div class="container card-main-title">
+                    <p class="container title">For Your <span>Date</span></p>
+        
+                    <lottie-player src="https://lottie.host/3662199f-35fa-4b23-9331-3330248ec0ce/8S4rhWC8Wd.json" background="#fff" speed="1" loop autoplay direction="1" mode="normal"></lottie-player>
+                    <p class="container card-main-description"><span>데이트</span>로 고민하는 당신을 위해<br>계획해드릴게요</p>
+                </div>
+                
+                
+                <div class="container card-main-btn">
+                    <button id="plan-now" class="btn btn-primary btn-plan-now">지금 계획하기</button>
+                    <button class="btn btn-primary btn-plan-previous">이전 계획보기</button>
+                </div>
             </div>
 
-            
-            <div class="container card-main-btn">
-                <button class="btn btn-primary btn-plan-now">지금 계획하기</button>
-                <button class="btn btn-primary btn-plan-previous">이전 계획보기</button>
+            <div id="plan">
+                <div>
+                    <img src="./css/images/back-button.png" width="25px" height="25px" id="back-button">
+                </div>
+
+                <div id="plan-content">
+                    <div class="card-plan-container">
+                        <div class="card-plan-where mb-3">
+                            <label for="place-where" class="form-label">어디로 데이트 가시나요?</label>
+                            <input type="text" class="form-control" id="place-where" placeholder="서울시/수원시/시흥시..">
+                        </div>
+        
+                        <div class="card-plan-season mb-3">
+                            <div class="form-label">어느 계절을 컨셉으로 잡을까요?</div>
+                            <select id="form-select-season" class="form-select">
+                                <option selected>선택하세요</option>
+                                <option value="spring">봄</option>
+                                <option value="summer">여름</option>
+                                <option value="fall">가을</option>
+                                <option value="winter">겨울</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="date-time-container">
+                        <div class="date-start-container">
+                            <div>
+                                데이트 시작 시간은
+                            </div>
+                            <select id="form-select-date-start" class="form-select" required>
+                                <option selected>선택하세요</option>
+                            </select>
+                        </div>
+
+                        <div class="date-end-container">
+                            <div>
+                                데이트 종료 시간은
+                            </div>
+                            <select id="form-select-date-end" class="form-select" required>
+                                <option selected>선택하세요</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="date-transport-container">
+                        <div>교통수단</div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="transport" id="transport-walk"  checked>
+                            <label class="form-check-label" for="transport-walk">
+                                뚜벅뚜벅
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="transport" id="transport-public">
+                            <label class="form-check-label" for="transport-public">
+                                대중교통
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="transport" id="transport-car">
+                            <label class="form-check-label" for="transport-car">
+                                자가용
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container card-main-btn">
+                    <button id="recommand-now" class="btn btn-primary btn-plan-now">추천받기!</button>
+                </div>
+            </div>
+
+            <div id="loading">
+                <lottie-player src="https://lottie.host/b416a7f7-cbf5-490e-b7b1-9fb9ec8c6b36/7Uy95FpfRO.json" background="#fff" speed="1" loop autoplay direction="1" mode="normal"></lottie-player>
             </div>
         </div>
+
         
         <footer>
             Copyright © For Your Date. All rights reserved
         </footer>
     </div>
+    <script src="./javascript/select.js"></script>
 </body>
 </html>
