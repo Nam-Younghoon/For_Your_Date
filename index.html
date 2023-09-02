@@ -20,6 +20,8 @@
     <script>
         const chatUrl = `https://estsoft-openai-api.jejucodingcamp.workers.dev/`
 
+        const tempUserForm = {}
+
         const data = [
             {
                 "role": "system",
@@ -65,6 +67,7 @@
             clickBackBtn();
             recommandBtn();
             homeBtn();
+            saveResult();
         })
 
         function init() {
@@ -73,6 +76,7 @@
             $('#loading').hide();
             $('#result').hide();
             $('#history').hide();
+            $('#history-detail').hide();
         }
 
         function clickPlanBtn() {
@@ -115,6 +119,10 @@
             $('#form-select-date-end option:eq(0)').prop('selected', true);
 
             $("input[name='transport'][value='walk']").prop("checked", true);
+
+            for (let key in tempUserForm) {
+                delete tempUserForm[key]
+            }
         }
 
         function recommandBtn() {
@@ -144,6 +152,7 @@
                         $('#gpt-answer').val(answer)
                         $('#loading').fadeOut(500, () => {
                             $('#result').fadeIn(500)
+                            cachingUserData(userInput, answer)
                         })
                     })
                 }
@@ -158,6 +167,13 @@
                     })
                     
                 })
+            })
+        }
+
+        function saveResult() {
+            $('#result-save-btn').click(() => {
+                const date = new Date();
+                localStorage.setItem(date.toISOString(), JSON.stringify(tempUserForm))
             })
         }
 
@@ -222,6 +238,19 @@
 
             return `${place}에서 데이트를 할거야. 지금 계절은 ${parseWeather()}이고, 데이트는 ${dateStart}에 만나서 ${dateEnd}까지 할거야. ${parseTransport()} 이동할 건데 ${parseWeather()}에 맞게 데이트 코스를 계획해줘`
         }
+
+        function cachingUserData(userInput, gptAnswer) {
+            const date = new Date()
+            const today = `${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일`
+            
+            tempUserForm.date = today
+            tempUserForm.question = userInput
+            tempUserForm.answer = gptAnswer
+            return
+        } 
+
+
+
 
     </script>
 
@@ -340,6 +369,19 @@
                     <div>History</div>
                 </div>
             </div>
+
+            <div id="history-detail">
+                <div class="history-detail">
+                    <div class="history-detail-content">
+                        <div class="container history-detail-question"></div>
+                        <div class=" container history-detail-answer"></div>
+                    </div>
+                    <div class="history-detail-btn">
+                        <button class="btn btn-primary" id="delete-btn">삭제</button>
+                        <button class="btn btn-primary" id="close-btn">닫기</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         
@@ -348,5 +390,6 @@
         </footer>
     </div>
     <script src="./javascript/select.js"></script>
+    <script src="./javascript/history.js"></script>
 </body>
 </html>

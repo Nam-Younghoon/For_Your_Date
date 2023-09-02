@@ -95,24 +95,27 @@ body {
     margin: 0 auto;
 }
 
-.card-main-btn {
+.card-main-btn, .history-detail-btn {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 15px;
 }
 
-.card-main-btn button {
+.card-main-btn button,
+.history-detail-btn > button {
     height: 56px;
 
 }
 
-.btn-plan-now, #result-save-btn {
+.btn-plan-now, #result-save-btn,
+#delete-btn {
     background-color: #f06c88 !important;
     border: 0px !important;
 }
 
-.btn-plan-now:hover, #result-save-btn:hover {
+.btn-plan-now:hover, #result-save-btn:hover,
+#delete-btn:hover {
     background-color: #ef5979 !important;
     border: 0px !important;
 }
@@ -120,6 +123,15 @@ body {
 .btn-plan-previous, #home-btn {
     background-color: #ee91a5 !important;
     border: 0px !important;
+}
+
+#close-btn {
+    background-color: lightgray !important;
+    border: 0px !important;
+}
+
+#close-btn:hover {
+    background-color: rgb(228, 228, 228) !important;
 }
 
 .btn-plan-previous:hover, #home-btn:hover {
@@ -218,6 +230,70 @@ body {
 #history-appbar > div {
     flex-grow : 1;
     text-align: center;
+}
+
+#history .card {
+    width: 100%;
+    height: fit-content;
+    margin-top: 20px;
+    display: flex;
+    padding: 15px 15px;
+    align-items: flex-start;
+    box-shadow: 5px 5px 5px #ec839a;
+
+}
+
+#history .card:hover {
+    background-color: rgba(211, 211, 211, 0.35);
+}
+
+#history-detail {
+    width: 100%;
+    height: 100%;
+}
+
+.history-detail {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-detail-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.history-detail-btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.history-detail-question,
+.history-detail-answer {
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+.history-detail-question {
+    border-radius: 30px 30px 0 30px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.25);
+    background-color: #eba0b0;
+    color: white;
+}
+
+.history-detail-answer {
+    border-radius: 0px 30px 30px 30px;
+    box-shadow: -5px -5px 10px rgba(0,0,0,.25);
+    background-color: whitesmoke;
+    color: black;
 }
 
 footer {
