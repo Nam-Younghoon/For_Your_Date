@@ -93,8 +93,7 @@
             $('#back-button').click(function() {
                 $('#plan').fadeOut(500, function() {
                     $('#main').fadeIn(500, function() {
-                        $('#place-where').val('');
-                        $('.form-select option:eq(0)').prop('selected', true);
+                        initUserForm()
                     });
                 });
             })
@@ -104,6 +103,18 @@
                     $('#main').fadeIn(500)
                 });
             })
+        }
+
+        function initUserForm() {
+            $('#place-where').val('');
+
+            $('#form-select-season option:eq(0)').prop('selected', true);
+
+            $('#form-select-date-start option:eq(0)').prop('selected', true);
+
+            $('#form-select-date-end option:eq(0)').prop('selected', true);
+
+            $("input[name='transport'][value='walk']").prop("checked", true);
         }
 
         function recommandBtn() {
@@ -142,7 +153,10 @@
         function homeBtn() {
             $('#home-btn').click(() => {
                 $('#result').fadeOut(500, () => {
-                    $('#main').fadeIn(500)
+                    $('#main').fadeIn(500, () => {
+                        initUserForm()
+                    })
+                    
                 })
             })
         }
