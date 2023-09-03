@@ -165,7 +165,6 @@
                     $('#main').fadeIn(500, () => {
                         initUserForm()
                     })
-                    
                 })
             })
         }
@@ -174,6 +173,13 @@
             $('#result-save-btn').click(() => {
                 const date = new Date();
                 localStorage.setItem(date.toISOString(), JSON.stringify(tempUserForm))
+                alert('저장이 완료되었습니다')
+                $('#result').fadeOut(500, () => {
+                    $('#main').fadeIn(500, () => {
+                        initUserForm()
+                        refreshHistory()
+                    })
+                })
             })
         }
 
@@ -191,6 +197,7 @@
             }
 
             const userRequirement = parseInputData(place, weather, dateStart, dateEnd, transport)
+            tempUserForm.place = place
             
             return userRequirement
         }
@@ -246,6 +253,7 @@
             tempUserForm.date = today
             tempUserForm.question = userInput
             tempUserForm.answer = gptAnswer
+            
             return
         } 
 
@@ -388,6 +396,8 @@
         <footer>
             Copyright © For Your Date. All rights reserved
         </footer>
+
+        <input type="hidden" id="historyKey" value="">
     </div>
     <script src="./javascript/select.js"></script>
     <script src="./javascript/history.js"></script>
