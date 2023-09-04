@@ -49,7 +49,8 @@
 <a href="https://img.shields.io/badge/-HTML5-E34F26?logo=HTML5&logoColor=white" target="_blank"><img src="https://img.shields.io/badge/-HTML5-E34F26?logo=HTML5&logoColor=white"/></a>
 <a href="https://img.shields.io/badge/css3-1572B6?logo=css3&logoColor=white" target="_blank"><img src="https://img.shields.io/badge/css3-1572B6?logo=css3&logoColor=white"/></a>
 <a href="https://img.shields.io/badge/javascript-F7DF1E?logo=javascript&logoColor=white" target="_blank"><img src="https://img.shields.io/badge/javascript-F7DF1E?logo=javascript&logoColor=white"/></a>
-
+<a href="https://img.shields.io/badge/jquery-0769AD?logo=jquery&logoColor=white" target="_blank"><img src="https://img.shields.io/badge/jquery-0769AD?logo=jquery&logoColor=white"/></a>
+<a href="https://img.shields.io/badge/bootstrap-7952B3?logo=bootstrap&logoColor=white" target="_blank"><img src="https://img.shields.io/badge/bootstrap-7952B3?logo=bootstrap&logoColor=white"/></a>
 
 ### 개발 기간
 2023.08.30 ~ 2023.09.06
