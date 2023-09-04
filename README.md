@@ -23,7 +23,7 @@
 5. History
 ![history](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/6c4f39ae-9499-475d-80db-388b87165f02)
 
-- [카카오오븐](https://ovenapp.io/view/U23mWtW1jsSSKADVnLsFzei88m4K0wid/)
+[카카오오븐](https://ovenapp.io/view/U23mWtW1jsSSKADVnLsFzei88m4K0wid/)
 
 
 
@@ -35,8 +35,9 @@
 
 
 ### 개발 기간
+2023.08.30 ~ 2023.09.06
 ### 웹 서비스 URL
-
+[For Your Date](https://nam-younghoon.github.io/For_Your_Date/)
 ## 3. 개발 일정 및 프로젝트 구조
 ### 개발일정
 ![WBS](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/72d425a4-d9bf-4f86-92df-89c9c29f9d4d)
