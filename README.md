@@ -12,18 +12,18 @@
 - 사용자로부터 데이트 장소, 계절, 방문 시간, 교통수단 데이터를 받아 데이트 코스 추천
 
 ### 프로토타입
-[카카오오븐](https://ovenapp.io/view/U23mWtW1jsSSKADVnLsFzei88m4K0wid/)
+- [카카오오븐](https://ovenapp.io/view/U23mWtW1jsSSKADVnLsFzei88m4K0wid/)
 
-#### 메인
-![main](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/0f35e820-0ff9-40b0-baa9-889f2bc61220)
-#### 사용자 입력
-![form](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/cdb05836-a4b4-4dbd-bbe3-3d9c69845ff0)
-#### 로딩
-![loading](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/32ca7f1b-d6fd-4f1c-b2e8-ba356c47278e)
-#### 결과
-![result](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/68f26173-1f17-40c9-bf17-563071607cec)
-#### 히스토리
-![history](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/6c4f39ae-9499-475d-80db-388b87165f02)
+    #### 메인
+    ![main](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/0f35e820-0ff9-40b0-baa9-889f2bc61220)
+    #### 사용자 입력
+    ![form](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/cdb05836-a4b4-4dbd-bbe3-3d9c69845ff0)
+    #### 로딩
+    ![loading](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/32ca7f1b-d6fd-4f1c-b2e8-ba356c47278e)
+    #### 결과
+    ![result](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/68f26173-1f17-40c9-bf17-563071607cec)
+    #### 히스토리
+    ![history](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/6c4f39ae-9499-475d-80db-388b87165f02)
 
 
 
@@ -51,14 +51,14 @@
 
 ## 4. UI
 
-#### 메인
+### 메인
 - 메인화면 입니다
 - 계획하기, 이전 계획보기 두가지로 이동할 수 있습니다
 - 심심함을 줄이기 위해, Lottie 이미지를 적용하였습니다
 
     ![main](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/5dfb795f-257b-4331-a70c-7c4e9255acc1)
 
-#### 사용자 입력
+### 사용자 입력
 - 사용자 입력폼입니다
 - 데이트 장소, 계절, 시작/종료 시간, 교통수단을 선택할 수 있습니다
 - 원활한 계획을 위해 `모든 입력폼은 필수조건`입니다
@@ -68,14 +68,14 @@
 
     ![form](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/ccec54bd-3d17-4c6c-a305-60af4be27eac)
 
-#### 로딩
+### 로딩
 - 로딩창 입니다
 - 사용자의 입력을 토대로 fetch()를 통해서 chatGPT API에 POST 요청을 하고, 응답값이 올 때 까지 로딩창이 유지됩니다
 - chatGPT API에서 응답이 오면 콜백 함수를 통해 다음 화면으로 넘어갑니다
 
     ![loading](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/b87ee6d1-d552-4a57-9a2c-adf78beb87c5)
 
-#### 결과
+### 결과
 - 결과창입니다
 - `textarea`에 chatGPT가 응답해준 데이트 추천 코스가 노출되도록 하였고 데이터 변동을 막기위해 `readonly` 속성을 주었습니다
 - `저장하기` 클릭 시, `localStorage`에 JSON 형식으로 데이터를 저장하게 구현했습니다
@@ -91,7 +91,7 @@
 
     ![result](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/16d8f687-9977-47ff-b8e6-1edb3fb7ad40)
 
-#### 히스토리
+### 히스토리
 - 사용자가 이전에 요청했던 데이트코스 목록입니다
 - 날짜 + 데이트 장소로 title을 노출합니다
 - 카드 클릭 시 히스토리 상세화면으로 넘어갑니다
