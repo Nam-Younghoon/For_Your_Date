@@ -62,7 +62,7 @@
 ## 3. 개발 일정 및 프로젝트 구조
 
 ### 개발일정
-![WBS](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/72d425a4-d9bf-4f86-92df-89c9c29f9d4d)
+![wbs](https://github.com/Nam-Younghoon/For_Your_Date/assets/58909988/48f3ef27-42e7-44fb-b022-a2e17d8fc12a)
 
 ### 프로젝트 구조
 ```tree
