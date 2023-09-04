@@ -81,10 +81,10 @@
 - `저장하기` 클릭 시, `localStorage`에 JSON 형식으로 데이터를 저장하게 구현했습니다
     ```JSON
     '현재 날짜' : {
-        'date' : '오늘 날짜',
-        'place' : '데이트 장소', 
-        'question' : '사용자의 질문', 
-        'answer' : 'chatGPT의 추천 데이트 코스'}
+        "date" : "오늘 날짜",
+        "place" : "데이트 장소", 
+        "question" : "사용자의 질문", 
+        "answer" : "chatGPT의 추천 데이트 코스"
     }
     ```
 
