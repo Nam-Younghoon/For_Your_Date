@@ -42,7 +42,7 @@ body {
     align-items: center;
     flex-grow: 1;
     box-shadow: 0 5px 10px rgba(0,0,0,.5);
-    overflow: scroll;
+    overflow: auto;
 }
 
 /* @media (min-width: 375px) and (max-width: 412px) {
