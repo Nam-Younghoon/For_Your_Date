@@ -64,6 +64,8 @@
 ### 개발 기간
 2023.08.30 ~ 2023.09.06
 
+### 서비스 기간
+2023.08.30 ~ 2023.12.29
 
 ### 웹 서비스 URL
 [For Your Date](https://nam-younghoon.github.io/For_Your_Date/)
